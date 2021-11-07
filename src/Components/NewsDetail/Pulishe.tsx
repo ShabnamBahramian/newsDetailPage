@@ -3,7 +3,7 @@ const Publishe=()=>{
     return(
         <div>
             <section className="w-80 h-16">
-                <span>اشتراک گذاری </span>
+                <span className="block text-center">اشتراک گذاری </span>
                 <ul className="flex w-52 h-6 mx-auto mt-2 px-10">
                     <li className="flex-row w-8 h-6 px-2">
                         <FaTelegramPlane/>
