@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+import Font from './Components/FontComp/Font';
+import NewsDetail from "./Components/NewsDetail/NewsDetail"
 
 function App() {
   return (
     <div className="App">
-      <div className="w-96 h-96 border border-black"> hi</div>
+      <Font>
+      <NewsDetail/>
+      </Font>
     </div>
   );
 }
