@@ -16,7 +16,7 @@ const NewsComment = () => {
           <Button />
         </Form>
       </Formik>
-      <section className="w-700 h-400 mx-auto mt-2 rounded-xl border">
+      <section className="w-700 h-400 mx-auto mt-2">
         <UserComment />
       </section>
     </div>

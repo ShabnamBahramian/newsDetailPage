@@ -1,6 +1,7 @@
 //import Detail from "./Detail";
+import CommentArchive from "./CommentArcive";
 import DownLoadLink from "./DownLoadLink";
-import NewsComment from "./NewsComment";
+//import NewsComment from "./NewsComment";
 import PublisherInfo from "./PublisherInfo";
 import Publishe from "./Pulishe";
 
@@ -29,7 +30,8 @@ const NewsDetail = () => {
             </section>
             <section className="w-800  min-h-900 mx-auto transform -rotate-6 rounded-3xl  bg-gray-50">
                  {/* <Detail/>  */}
-                <NewsComment/> 
+                {/* <NewsComment/>  */}
+                <CommentArchive/>
             </section>
           </span>
         </div>
