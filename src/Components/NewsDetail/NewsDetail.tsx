@@ -1,11 +1,16 @@
-//import Detail from "./Detail";
+import { useState } from "react";
+import Detail from "./Detail";
 import CommentArchive from "./CommentArcive";
 import DownLoadLink from "./DownLoadLink";
-//import NewsComment from "./NewsComment";
+import NewsComment from "./NewsComment";
 import PublisherInfo from "./PublisherInfo";
 import Publishe from "./Pulishe";
+import TabBtn from "./TabBtn";
 
 const NewsDetail = () => {
+  const [category, setCategory] = useState<boolean>(true);
+  const [comment, setComment] = useState<boolean>(false);
+  const [archive, setArchive] = useState<boolean>(false);
   return (
     <div className="container mx-auto">
       <div className="h-20 border border-black"></div>
@@ -18,20 +23,25 @@ const NewsDetail = () => {
             <Publishe />
           </section>
           <section className="w-80 h-10 mt-4 pt-2 rounded-3xl bg-gray-50">
-            <DownLoadLink/>
+            <DownLoadLink />
           </section>
         </div>
         <div className="flex-row w-1000 py-14">
           <span className="block w-800 min-h-950 mx-auto rounded-3xl transform rotate-6 bg-blue-100">
             <section className="flex w-800 h-8 mx-auto mr-10 px-10 transform -rotate-6">
-              <div className="flex-row w-20 h-10 pt-2 text-center bg-gray-50 text-sm border border-gray-200"> اخبار</div>
-              <div className="flex-row w-20 h-10 pt-2 text-center bg-gray-50 text-sm border border-gray-200">نظرات</div>
-              <div className="flex-row w-28 h-10 pt-2 text-center bg-gray-50 text-sm border border-gray-200"> آرشیو نظرات</div>
+              <TabBtn
+                category={category}
+                setCategory={setCategory}
+                comment={comment}
+                setComment={setComment}
+                archive={archive}
+                setArchive={setArchive}
+              />
             </section>
             <section className="w-800  min-h-900 mx-auto transform -rotate-6 rounded-3xl  bg-gray-50">
-                 {/* <Detail/>  */}
-                {/* <NewsComment/>  */}
-                <CommentArchive/>
+              {category && <Detail />}
+              {comment && <NewsComment />}
+              {archive && <CommentArchive />}
             </section>
           </span>
         </div>

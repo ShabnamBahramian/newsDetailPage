@@ -9,7 +9,7 @@ const Email = () => {
         type="email"
         placeholder="لطفا ایمیل خود را وارد کنید...."
       />
-      <span className="block w-650 h-6 mx-auto">
+      <span className="block w-650 h-6 mx-auto text-xs text-red-500">
            <ErrorMessage name="email" />
       </span>
      
